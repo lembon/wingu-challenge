@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Reclamo
+from .serializers import ReclamoSerializer
 
-# Create your views here.
+class ReclamoViewSet(viewsets.ModelViewSet):
+    queryset = Reclamo.objects.all()
+    serializer_class = ReclamoSerializer

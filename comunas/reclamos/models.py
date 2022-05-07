@@ -15,3 +15,6 @@ class Reclamo(models.Model):
     descripcion = models.TextField()
     comuna = models.ForeignKey(Comuna, models.CASCADE)
     imagen = models.ImageField(upload_to='images/')
+
+    def __str__(self):
+        return self.titulo
